@@ -17,6 +17,7 @@ BuildRequires:	perl-devel >= 5.6.1
 BuildRequires:  perl(Spiffy) >= 0.29
 BuildRequires:  perl(Test::More) >= 0.62
 Requires:	perl >= 5.6.1
+BuildRoot:	%_tmppath/%name-%version
 BuildArch:	noarch
 
 %define _requires_exceptions Module::Install
