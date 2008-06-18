@@ -1,7 +1,7 @@
 %define module	Test-Base
 %define name	perl-%module
 %define version	0.54
-%define	release	%mkrel 2
+%define	release	%mkrel 3
 
 Name:		%name
 Version:	%version
