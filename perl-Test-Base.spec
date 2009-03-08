@@ -2,6 +2,8 @@
 %define name	perl-%module
 %define version	0.56
 %define	release	%mkrel 1
+%define _requires_exceptions Module::Install
+
 
 Name:		%name
 Version:	%version
@@ -9,18 +11,13 @@ Release:	%release
 Summary:	A Data Driven Testing Framework
 License:	GPL or Artistic
 Group:		Development/Perl
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Test/%module-%version.tar.gz
 Url:		http://search.cpan.org/dist/%module/
-%if %{mdkversion} < 1010
-BuildRequires:	perl-devel >= 5.6.1
-%endif
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Test/%module-%version.tar.gz
 BuildRequires:  perl(Spiffy) >= 0.29
 BuildRequires:  perl(Test::More) >= 0.62
-Requires:	perl >= 5.6.1
-BuildRoot:	%_tmppath/%name-%version
+BuildRequires:  perl(Test::Deep)
 BuildArch:	noarch
-
-%define _requires_exceptions Module::Install
+BuildRoot:	%_tmppath/%name-%version
 
 %description
 Perl gives you a standard way to run tests with Test::Harness, and basic
