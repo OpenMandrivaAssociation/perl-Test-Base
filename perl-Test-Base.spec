@@ -1,6 +1,6 @@
 %define module	Test-Base
 %define name	perl-%module
-%define version	0.56
+%define version	0.58
 %define	release	%mkrel 1
 %define _requires_exceptions Module::Install
 
