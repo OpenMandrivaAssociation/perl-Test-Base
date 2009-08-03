@@ -1,23 +1,23 @@
-%define module	Test-Base
-%define name	perl-%module
-%define version	0.58
-%define	release	%mkrel 1
+%define upstream_name	 Test-Base
+%define upstream_version 0.58
+
 %define _requires_exceptions Module::Install
 
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Name:		%name
-Version:	%version
-Release:	%release
 Summary:	A Data Driven Testing Framework
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%module/
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Test/%module-%version.tar.gz
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:    ftp://ftp.perl.org/pub/CPAN/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:  perl(Spiffy) >= 0.29
 BuildRequires:  perl(Test::More) >= 0.62
 BuildRequires:  perl(Test::Deep)
 BuildArch:	noarch
-BuildRoot:	%_tmppath/%name-%version
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Perl gives you a standard way to run tests with Test::Harness, and basic
@@ -28,7 +28,7 @@ Test::Base gives you a way to write your own test framework base class that is
 trivial.
 
 %prep
-%setup -q -n %module-%version
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
@@ -50,5 +50,3 @@ rm -rf %buildroot
 %perl_vendorlib/Test
 %perl_vendorlib/Module
 %_mandir/*/*
-
-
