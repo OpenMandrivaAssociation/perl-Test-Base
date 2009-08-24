@@ -1,5 +1,5 @@
 %define upstream_name	 Test-Base
-%define upstream_version 0.58
+%define upstream_version 0.59
 
 %define _requires_exceptions Module::Install
 
