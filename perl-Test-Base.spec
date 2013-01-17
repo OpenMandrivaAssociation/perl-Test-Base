@@ -1,11 +1,15 @@
 %define upstream_name	 Test-Base
 %define upstream_version 0.60
 
+%if %{_use_internal_dependency_generator}
+%define __noautoreq 'Module::Install.*'
+%else
 %define _requires_exceptions Module::Install
+%endif
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    5
+Release:    6
 
 Summary:	A Data Driven Testing Framework
 License:	GPL+ or Artistic
