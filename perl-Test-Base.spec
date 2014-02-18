@@ -1,5 +1,5 @@
 %define modname	Test-Base
-%define modver	0.60
+%define modver 0.62
 
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'Module::Install.*'
@@ -10,11 +10,11 @@
 Summary:	A Data Driven Testing Framework
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	10
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}/
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Test/%{modname}-%{modver}.tar.gz
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Test/Test-Base-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Spiffy) >= 0.29
 BuildRequires:	perl(Test::More) >= 0.62
@@ -47,4 +47,5 @@ trivial.
 %{perl_vendorlib}/Test
 %{perl_vendorlib}/Module
 %{_mandir}/man3/*
+
 

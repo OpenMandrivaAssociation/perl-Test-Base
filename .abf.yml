@@ -1,2 +1,4 @@
+removed_sources:
+  Test-Base-0.60.tar.gz: e2727e9958960e53de6887697b3e12f64e891b17
 sources:
-  "Test-Base-0.60.tar.gz": e2727e9958960e53de6887697b3e12f64e891b17
+  Test-Base-0.62.tar.gz: 399a08e7056759a5116649cb8f5a911fbdd262c8
