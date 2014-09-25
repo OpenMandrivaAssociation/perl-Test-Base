@@ -45,5 +45,5 @@ trivial.
 %files
 %doc Changes README
 %{perl_vendorlib}/Test
-%{perl_vendorlib}/Module
+# %{perl_vendorlib}/Module
 %{_mandir}/man3/*
