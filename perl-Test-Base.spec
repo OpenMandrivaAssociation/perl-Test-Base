@@ -10,7 +10,7 @@
 Summary:	A Data Driven Testing Framework
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	1
+Release:	2
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/Test::Base
@@ -30,7 +30,7 @@ Test::Base gives you a way to write your own test framework base class that is
 trivial.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{modver}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
