@@ -13,7 +13,7 @@ Version:	%perl_convert_version %{modver}
 Release:	5
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/Test::Base
+Url:		https://metacpan.org/pod/Test::Base
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Test/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Spiffy) >= 0.29
