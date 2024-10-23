@@ -1,5 +1,4 @@
 %define modname	Test-Base
-%define modver 0.89
 
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'Module::Install.*'
@@ -9,15 +8,15 @@
 
 Summary:	A Data Driven Testing Framework
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	6
+Version:	0.89
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/Test::Base
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Test/%{modname}-%{modver}.tar.gz
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Test/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
-BuildRequires:	perl(Spiffy) >= 0.29
-BuildRequires:	perl(Test::More) >= 0.62
+BuildRequires:	perl(Spiffy)
+BuildRequires:	perl(Test::More)
 BuildRequires:	perl(Test::Deep)
 BuildRequires:	perl-devel
 
@@ -30,17 +29,17 @@ Test::Base gives you a way to write your own test framework base class that is
 trivial.
 
 %prep
-%autosetup -p1 -n %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %check
-%make test
+%make_build test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes README
